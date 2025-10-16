@@ -31,7 +31,7 @@ macro_rules! doutln {
     }}
 }
 
-pub fn serialize_string<T>(t:&T) -> String where T: serde::Serialize{
+pub fn serialize_string<T>(t:&T) -> String where T: ::serde::Serialize{
     bytes_to_string(&bincode::serialize(t).unwrap())
 }
 
